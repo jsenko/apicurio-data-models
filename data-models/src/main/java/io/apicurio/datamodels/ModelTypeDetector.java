@@ -42,6 +42,8 @@ public class ModelTypeDetector {
                 return ModelType.ASYNCAPI26;
             } else if (asyncapi.startsWith("3.0")) {
                 return ModelType.ASYNCAPI30;
+            } else if (asyncapi.startsWith("3.1")) {
+                return ModelType.ASYNCAPI31;
             } else {
                 throw new RuntimeException("Unknown/unsupported AsyncAPI version: " + asyncapi);
             }
